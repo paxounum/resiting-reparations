@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Re-SITE-ing</title>
+    
+    <!-- Load Leaflet CSS -->
+    <link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet">
+    
+    <!-- Load our styles -->
+    <link href="./style.css" rel="stylesheet">
+    
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.2.0/carto.min.js"></script>
+    
+    <!-- import the Mustache library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.0/mustache.min.js"></script>
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/definitions-script.js" defer></script>
+    
+  </head>
+  
+  <body style="margin: 0px;">
+  <div id="map"></div>
+    
+    <!-- TITLE BAR -->
+    <section id="title-container">
+      <div class="title-item title">
+          situating <br/>
+          DEFINITIONS
+      </div>
+      <div class="title-item subtitle">
+          ...mapping "REPARATIONS"
+      </div>
+      <div class="title-item description">
+          Click a point of view to read their definition...
+      </div>
+    </section>
+    
+    <!-- NAVIGATION BAR -->
+    <section id="nav-container" class="nav-panel">
+      <h3><a2 class="toggle-nav">ATLAS PAGES</a2>
+      </h3>
+      <ol>
+        <li>
+          <a
+            href="https://resiting-reparations.glitch.me/index.html"
+            class="button"
+          >
+            INTRODUCTION
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://resiting-reparations.glitch.me/honor.html"
+            class="button"
+          >
+            COMMUNITY HONOR
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://resiting-reparations.glitch.me/harms.html"
+            class="button"
+          >
+            COMMUNITY HARM
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://resiting-reparations.glitch.me/definitions.html"
+            class="button"
+          >
+            REPARATIONS DEFINITIONS
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://resiting-reparations.glitch.me/index.html"
+            class="button"
+          >
+            PROCESSES
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://resiting-reparations.glitch.me/hr40.html"
+            class="button"
+          >
+            NATIONAL EFFORTS
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://resiting-reparations.glitch.me/index.html"
+            class="button"
+          >
+            THE LONG STRUGGLE
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://resiting-reparations.glitch.me/resources.html"
+            class="button"
+          >
+            RESOURCES
+          </a>
+        </li>
+      </ol>
+    </section>
+    
+    
+    <!-- Popup -->
+    <script class="popup-template" type="x-tmpl-mustache">
+      <div>
+        <h3><img class="icon" src="https://cdn.glitch.com/84dbdb18-88ef-4a1c-bddc-c150d9548773%2Fvoice.png?v=1618618037676">{{name}}</h3>
+        <h6>Resident of {{tenure}}</h6><br/>
+        <p2><strong>Where are we?</strong> {{scene}}</p2>
+      </div>
+    </script>
+    
+    <!-- Definitions Panel -->
+    <section id="definition-panel">
+      <div>
+        <h3>What does "reparations" mean from where you stand?</h3>
+      <div class="def-display">
+      <div class="def-item beginning-content spacer" style="background: var(--owhite)"></div>
+      <div class="def-item program-content spacer" style="background: var(--owhite)"></div>
+      <div class="def-item community-content spacer" style="background: var(--owhite)"></div>
+      </div>
+      </div>
+    </section>
+    
+  </body>
+</html>
